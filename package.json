@@ -1,0 +1,19 @@
+{
+  "name": "alex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Account Email Validate.js",
+  "dependencies": {
+    "mydoc-plugins": "https://alex-j-chu:alexchu1@github.com/MyDocSingapore/MyDoc-JS-Plugins.git",
+    "reqwest": "^2.0.5",
+    "websocket": "^1.0.24",
+    "ws": "^3.0.0",
+    "xhr2": "^0.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
