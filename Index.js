@@ -1,5 +1,6 @@
 
 const PEPSocket = require("mydoc-plugins/pep/pepsocket");
+const loki = require('lokijs')
 const setup = require("./Setup");
 const CS = require("mydoc-plugins/console");
 
@@ -76,6 +77,16 @@ const incomingMessage = function(inbound) {
     client._send(message);
     
 };
+
+let DB = new loki('db.json', {
+    autosave: true,
+    autosaveInterval: 5000,
+    autload: true
+});
+
+DB.addCollection('messages');
+
+DB.insert({ name: 'test', value: 1});
 
 setup.then(function(data){
 
