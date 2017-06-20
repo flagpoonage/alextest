@@ -7,6 +7,7 @@ var client;
 var idArray;
 
 var my_account;
+var my_database;
 
 const incomingGroup = function(group){
     if(my_account.chat_id_username === group.from){
@@ -79,8 +80,6 @@ const incomingMessage = function(inbound) {
 
 setup.then(function(data){
 
-    console.log(data.database);
-
     client = new PEPSocket({
         console_info_impl: CS.slog,
         console_warn_impl: CS.serr,
@@ -90,6 +89,9 @@ setup.then(function(data){
     });
 
     my_account = data.account;
+    my_database = data.database;
+
+    console.log(my_database.getCollection('messages').find());
 
     CS.slog("Setup is complete!", data.account, data.authentication);
 

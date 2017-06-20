@@ -22,10 +22,12 @@ module.exports = new Promise((resolve, reject) => {
 
     var account, authentication, db;
 
-    const onResolve = data => a => {
-        CS.slog('Database loading complete');
-        data.database = db;
-        resolve(data);
+    const onResolve = function (data) {
+        return function(a) {
+            CS.slog('Database loading complete');
+            data.database = db;
+            resolve(data);
+        };
     };
 
     xhr(options).then(function(response){
