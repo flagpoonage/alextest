@@ -1,6 +1,5 @@
 
 const PEPSocket = require("mydoc-plugins/pep/pepsocket");
-const loki = require('lokijs')
 const setup = require("./Setup");
 const CS = require("mydoc-plugins/console");
 
@@ -78,17 +77,9 @@ const incomingMessage = function(inbound) {
     
 };
 
-let DB = new loki('db.json', {
-    autosave: true,
-    autosaveInterval: 5000,
-    autload: true
-});
-
-DB.addCollection('messages');
-
-DB.insert({ name: 'test', value: 1});
-
 setup.then(function(data){
+
+    console.log(data.database);
 
     client = new PEPSocket({
         console_info_impl: CS.slog,
@@ -101,8 +92,6 @@ setup.then(function(data){
     my_account = data.account;
 
     CS.slog("Setup is complete!", data.account, data.authentication);
-
-    
 
     return client.connect(data.authentication.access_token);
 

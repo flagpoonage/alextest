@@ -1,7 +1,7 @@
 
 const xhr = require("reqwest");
 const CS  = require("mydoc-plugins/console");
-const loki = require('lokijs');
+const Loki = require('lokijs');
 
 var body = {
     grant_type: "password",
@@ -18,59 +18,59 @@ var options = {
     data: body
 }
 
-const onDbLoaded = function(resolver) {
-    return function(db) {
-        var account, authentication;
+module.exports = new Promise((resolve, reject) => {
 
-        xhr(options).then(function(response){
+    var account, authentication, db;
 
-            authentication = response.data.authentication;
+    const onResolve = data => a => {
+        CS.slog('Database loading complete');
+        data.database = db;
+        resolve(data);
+    };
 
-            var access_token = authentication.access_token;
-            console.log(response);
-            console.log("=".repeat(100));
-            console.log("Access Token is " + access_token);
-            console.log("=".repeat(100));
+    xhr(options).then(function(response){
 
-            let getAccount = {
-                method: "get",
-                url: "https://api.uat.my-doc.com/api/v2/accounts",
-                data: {access_token: access_token}
-            }
+        CS.slog('Authenticated', response.data);
 
-            return xhr(getAccount).then(function(response){
+        authentication = response.data.authentication;
 
-                account = response.data;
+        var access_token = authentication.access_token;
 
-                var id = response.data.id;
-                console.log(response);
-                console.log("=".repeat(100));
-                console.log("Account ID is " + id);
-                console.log("=".repeat(100));
+        let getAccount = {
+            method: "get",
+            url: "https://api.uat.my-doc.com/api/v2/accounts",
+            data: {access_token: access_token}
+        }
 
-                resolver({
+        return xhr(getAccount).then(function(response){
+
+            CS.slog('Account info returned', response.data);
+
+            account = response.data;
+
+            var id = response.data.id;
+            // console.log(response);
+            // console.log("=".repeat(100));
+            // console.log("Account ID is " + id);
+            // console.log("=".repeat(100));
+
+            db = new Loki('db.json', {
+                autosave: true,
+                autosaveInterval: 5000,
+                serializationMethod: 'pretty',
+                persistenceMethod: 'fs',
+                autoload: true,
+                autoloadCallback: onResolve({
                     account: account,
                     authentication: authentication
-                });
-
-            
-            }).catch(function (error){
-                console.log(error.response);
+                })
             });
         
-        }).catch(function(error){
+        }).catch(function (error){
             console.log(error.response);
         });
-    };
-};
-
-module.exports = new Promise((resolve, reject) => {
-  this.db = new loki('db.json', {
-    autosave: true,
-    autosaveInterval: 5000,
-    serializationMethod: 'pretty',
-    persistenceMethod: 'fs',
-    autoload: true,
-    autoloadCallback: onDbLoaded(resolve)
-  });
+    
+    }).catch(function(error){
+        console.log(error.response);
+    });
 });
