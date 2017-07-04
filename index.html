@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+    <head>
+        
+        <script src="https://use.fontawesome.com/106fff7c1d.js"></script>
+        <title>Test Page</title>
+         <link href="reset.css" type = "text/css" rel = "stylesheet"/>
+        <link href="index.css" type = "text/css" rel = "stylesheet"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    </head>
+    <body>
+        
+        <aside class = "sidebar" >
+            <div class = "top-sidebar">
+                <i class="material-icons center-sidebar" onclick="location.href = 'https://material.io/icons/'" style="margin-top:10px">menu</i>
+                <p>  &emsp; </p>
+                <p>&emsp;</p>
+                <p>&emsp;</p>
+                <p>&emsp;</p>
+                <i class="material-icons center-sidebar">account_circle &nbsp;</i>
+                <hr>
+            </div>
+            <i class="material-icons center-sidebar">nfc &nbsp;</i>
+            <hr>
+            <i class="material-icons center-sidebar">inbox &nbsp;</i>
+            <i class="material-icons center-sidebar">dashboard &nbsp;</i>
+            <i class="material-icons center-sidebar">volume_up &nbsp;</i>
+            <i class="material-icons center-sidebar">person &nbsp;</i>
+            <i class="material-icons center-sidebar">contacts &nbsp;</i>
+            <i class="material-icons center-sidebar">headset_mic &nbsp;</i>
+            <i class="material-icons center-sidebar">local_bar &nbsp;</i>
+            <hr>
+            <p></p>
+            <i class="material-icons center-sidebar" style= "font-size: 25px">list &nbsp;</i>
+        </aside>
+    
+        <main class = "window">
+            <header class = "header">
+                <p class = "center-header" style = "text-align: left">Live View <span class="right" style = "float: right"><i class="material-icons" style="font-size: 30px">refresh &emsp;</i><i class="material-icons" style="font-size: 30px">filter_list &emsp;</i><i class="material-icons" style="font-size: 30px">more_vert</i></span></p>   
+            </header>
+            
+            <article class = "content">
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>
+                                Patient
+                            </th>
+                            <th>
+                                Professional
+                            </th>
+                            <th>
+                                Group
+                            </th>
+                            <th class = "type-cell">
+                                Type
+                            </th>
+                            <th>
+                                Wait
+                            </th>
+                            <th>
+                                Waiting For
+                            </th>
+                            <th>
+                                Last Note
+                            </th>
+                            <th class = action>
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class = "patient-cell">
+                                <i class="material-icons">person_pin</i> Ann S
+                            </td>
+                            <td class = "professional-cell">
+                                <i class="material-icons">person_pin</i> Dr Jim W
+                            </td>
+                            <td class="group-cell">
+                                MyUmbrella
+                            </td>
+                            <td class = "type-cell">
+                                <i class="material-icons"> &nbsp;contact_mail</i>
+                            </td>
+                            <td class ="wait-cell">
+                                02:17:29
+                            </td>
+                            <td class = "waiting-for-cell">
+                                Doctor reply
+                            </td>
+                            <td class = "last-note-cell">
+                                Sent
+                            </td>
+                            <td class = "action">
+                                <i class="material-icons">more_vert</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "patient-cell">
+                                <i class="material-icons">person_pin</i> Jose M
+                            </td>
+                            <td class = "professional-cell">
+                                <i class="material-icons">person_pin</i> Yufin L
+                            </td>
+                            <td class="group-cell">
+                                MyUmbrella
+                            </td>
+                            <td class = "type-cell">
+                               <i class="material-icons">&nbsp;headset_mic</i>
+                            </td>
+                            <td class ="wait-cell">
+                                00:39:12
+                            </td>
+                            <td class = "waiting-for-cell">
+                                Agent reply
+                            </td>
+                            <td class = "last-note-cell">
+                                
+                            </td>
+                            <td class = "action">
+                                <i class="material-icons">more_vert</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "patient-cell">
+                                <i class="material-icons">person_pin</i> Janet T
+                            </td>
+                            <td class = "professional-cell">
+                                <i class="material-icons">person_pin</i> Dr Harry G
+                            </td>
+                            <td class="group-cell">
+                                AXA
+                            </td>
+                            <td class = "type-cell">
+                                <i class="material-icons">&nbsp;local_bar</i>
+                            </td>
+                            <td class ="wait-cell">
+                                00:33:04
+                            </td>
+                            <td class = "waiting-for-cell">
+                                Doctor reply
+                            </td>
+                            <td class = "last-note-cell">
+                                Delivered
+                            </td>
+                            <td class = "action">
+                                <i class="material-icons">more_vert</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "patient-cell">
+                                <i class="material-icons">person_pin</i> Ann S
+                            </td>
+                            <td class = "professional-cell">
+                                <i class="material-icons">person_pin</i> Dr Jim W
+                            </td>
+                            <td class="group-cell">
+                                MyUmbrella
+                            </td>
+                            <td class = "type-cell">
+                                <i class="material-icons">&nbsp;contact_mail</i>
+                            </td>
+                            <td class ="wait-cell">
+                                02:17:29
+                            </td>
+                            <td class = "waiting-for-cell">
+                                Doctor reply
+                            </td>
+                            <td class = "last-note-cell">
+                                Sent
+                            </td>
+                            <td class = "action">
+                                <i class="material-icons">more_vert</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "patient-cell">
+                                <i class="material-icons">person_pin</i> Ann S
+                            </td>
+                            <td class = "professional-cell">
+                                <i class="material-icons">person_pin</i> Dr Jim W
+                            </td>
+                            <td class="group-cell">
+                                MyUmbrella
+                            </td>
+                            <td class = "type-cell">
+                                <i class="material-icons">&nbsp;contact_mail</i>
+                            </td>
+                            <td class ="wait-cell">
+                                02:17:29
+                            </td>
+                            <td class = "waiting-for-cell">
+                                Doctor reply
+                            </td>
+                            <td class = "last-note-cell">
+                                Sent
+                            </td>
+                            <td class = "action">
+                                <i class="material-icons">more_vert</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "patient-cell">
+                                <i class="material-icons">person_pin</i> Ann S
+                            </td>
+                            <td class = "professional-cell">
+                                <i class="material-icons">person_pin</i> Dr Jim W
+                            </td>
+                            <td class="group-cell">
+                                MyUmbrella
+                            </td>
+                            <td class = "type-cell">
+                                <i class="material-icons">&nbsp;contact_mail</i>
+                            </td>
+                            <td class ="wait-cell">
+                                02:17:29
+                            </td>
+                            <td class = "waiting-for-cell">
+                                Doctor reply
+                            </td>
+                            <td class = "last-note-cell">
+                                Sent
+                            </td>
+                            <td class = "action">
+                                <i class="material-icons">more_vert</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "patient-cell">
+                                <i class="material-icons">person_pin</i> Ann S
+                            </td>
+                            <td class = "professional-cell">
+                                <i class="material-icons">person_pin</i> Dr Jim W
+                            </td>
+                            <td class="group-cell">
+                                MyUmbrella
+                            </td>
+                            <td class = "type-cell">
+                                <i class="material-icons">&nbsp;local_bar</i>
+                            </td>
+                            <td class ="wait-cell">
+                                02:17:29
+                            </td>
+                            <td class = "waiting-for-cell">
+                                Doctor reply
+                            </td>
+                            <td class = "last-note-cell">
+                                Sent
+                            </td>
+                            <td class = "action">
+                                <i class="material-icons">more_vert</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "patient-cell">
+                                <i class="material-icons">person_pin</i> Ann S
+                            </td>
+                            <td class = "professional-cell">
+                                <i class="material-icons">person_pin</i> Dr Jim W
+                            </td>
+                            <td class="group-cell">
+                                MyUmbrella
+                            </td>
+                            <td class = "type-cell">
+                                <i class="material-icons">&nbsp;headset_mic</i>
+                            </td>
+                            <td class ="wait-cell">
+                                02:17:29
+                            </td>
+                            <td class = "waiting-for-cell">
+                                Doctor reply
+                            </td>
+                            <td class = "last-note-cell">
+                                Sent
+                            </td>
+                            <td class = "action">
+                                <i class="material-icons">more_vert</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "patient-cell">
+                                <i class="material-icons">person_pin</i> Ann S
+                            </td>
+                            <td class = "professional-cell">
+                                <i class="material-icons">person_pin</i> Dr Jim W
+                            </td>
+                            <td class="group-cell">
+                                MyUmbrella
+                            </td>
+                            <td class = "type-cell">
+                                <i class="material-icons">&nbsp;headset_mic</i>
+                            </td>
+                            <td class ="wait-cell">
+                                02:17:29
+                            </td>
+                            <td class = "waiting-for-cell">
+                                Doctor reply
+                            </td>
+                            <td class = "last-note-cell">
+                                Sent
+                            </td>
+                            <td class = "action">
+                                <i class="material-icons">more_vert</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "patient-cell">
+                                <i class="material-icons">person_pin</i> Ann S
+                            </td>
+                            <td class = "professional-cell">
+                                <i class="material-icons">person_pin</i> Dr Jim W
+                            </td>
+                            <td class="group-cell">
+                                MyUmbrella
+                            </td>
+                            <td class = "type-cell">
+                                <i class="material-icons">&nbsp;local_bar</i>
+                            </td>
+                            <td class ="wait-cell">
+                                02:17:29
+                            </td>
+                            <td class = "waiting-for-cell">
+                                Doctor reply
+                            </td>
+                            <td class = "last-note-cell">
+                                Sent
+                            </td>
+                            <td class = "action">
+                                <i class="material-icons">more_vert</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "patient-cell">
+                                <i class="material-icons">person_pin</i> Ann S
+                            </td>
+                            <td class = "professional-cell">
+                                <i class="material-icons">person_pin</i> Dr Jim W
+                            </td>
+                            <td class="group-cell">
+                                MyUmbrella
+                            </td>
+                            <td class = "type-cell">
+                                <i class="material-icons">&nbsp;contact_mail</i>
+                            </td>
+                            <td class ="wait-cell">
+                                02:17:29
+                            </td>
+                            <td class = "waiting-for-cell">
+                                Doctor reply
+                            </td>
+                            <td class = "last-note-cell">
+                                Sent
+                            </td>
+                            <td class = "action">
+                                <i class="material-icons">more_vert</i>
+                            </td>
+                        </tr>
+                                                
+                    </tbody>
+                </table>
+                
+            </article>
+
+        </main>
+    </body>
