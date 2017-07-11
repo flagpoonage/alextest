@@ -5,24 +5,19 @@
         <script src="https://use.fontawesome.com/106fff7c1d.js"></script>
         <title>Test Page</title>
          <link href="reset.css" type = "text/css" rel = "stylesheet"/>
-        <link href="index.css" type = "text/css" rel = "stylesheet"/>
+          
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <link href="index.css" type = "text/css" rel = "stylesheet"/>
     
+
     </head>
     <body>
         
         <aside class = "sidebar" >
             <div class = "top-sidebar">
-                <i class="material-icons center-sidebar" onclick="location.href = 'https://material.io/icons/'" style="margin-top:10px">menu</i>
-                <p>  &emsp; </p>
-                <p>&emsp;</p>
-                <p>&emsp;</p>
-                <p>&emsp;</p>
-                <i class="material-icons center-sidebar">account_circle &nbsp;</i>
+                <i class="material-icons sidebar-menu">menu</i>
+                <img src ="../../../Pictures/Senior Photo.jpg" style="width: 50px; height: 50px; border-radius: 25px; margin-left: 14px "> &nbsp;
                 <hr>
             </div>
             <i class="material-icons center-sidebar">nfc &nbsp;</i>
@@ -41,7 +36,7 @@
     
         <main class = "window">
             <header class = "header">
-                <p class = "center-header" style = "text-align: left">Live View <span class="right" style = "float: right"><i class="material-icons" style="font-size: 30px">refresh &emsp;</i><i class="material-icons" style="font-size: 30px">filter_list &emsp;</i><i class="material-icons" style="font-size: 30px">more_vert</i></span></p>   
+                <p class = "center-header" style = "text-align: left">Live View <span style = "float: right"><i class="material-icons header-icons" >refresh &emsp;</i><i class="material-icons header-icons" >filter_list &emsp;</i><i class="material-icons header-icons" >more_vert</i></span></p>   
             </header>
             
             <article class = "content">
@@ -70,7 +65,7 @@
                             <th>
                                 Last Note
                             </th>
-                            <th class = action>
+                            <th class = "action" style="padding: 15px 24px">
                                 Action
                             </th>
                         </tr>
@@ -78,10 +73,10 @@
                     <tbody>
                         <tr>
                             <td class = "patient-cell">
-                                <i class="material-icons">person_pin</i> Ann S
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_patient_female.svg"> &nbsp;  Ann S
                             </td>
                             <td class = "professional-cell">
-                                <i class="material-icons">person_pin</i> Dr Jim W
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_doctor_male.svg"> &nbsp;  Dr Jim W
                             </td>
                             <td class="group-cell">
                                 MyUmbrella
@@ -89,7 +84,7 @@
                             <td class = "type-cell">
                                 <i class="material-icons"> &nbsp;contact_mail</i>
                             </td>
-                            <td class ="wait-cell">
+                            <td class ="wait-cell red-text">
                                 02:17:29
                             </td>
                             <td class = "waiting-for-cell">
@@ -99,15 +94,23 @@
                                 Sent
                             </td>
                             <td class = "action">
-                                <i class="material-icons">more_vert</i>
+                                <div class = "dropdown">
+                                    <i class="material-icons dropbtn" onclick = "myFunction()">more_vert</i>
+                                    <div id = "myDropdown" class = "dropdown-content">
+                                        <a href = "#">Send Note</a>
+                                        <a href = "#">Action A</a>
+                                        <a href = "#">Action B</a>
+                                    </div>
+                                </div>
+                                <script src = "index.js"></script>
                             </td>
                         </tr>
                         <tr>
                             <td class = "patient-cell">
-                                <i class="material-icons">person_pin</i> Jose M
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_patient_male.svg"> &nbsp;  Jose M
                             </td>
                             <td class = "professional-cell">
-                                <i class="material-icons">person_pin</i> Yufin L
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_agent.svg"> &nbsp;  Yufin L
                             </td>
                             <td class="group-cell">
                                 MyUmbrella
@@ -115,7 +118,7 @@
                             <td class = "type-cell">
                                <i class="material-icons">&nbsp;headset_mic</i>
                             </td>
-                            <td class ="wait-cell">
+                            <td class ="wait-cell red-text">
                                 00:39:12
                             </td>
                             <td class = "waiting-for-cell">
@@ -125,15 +128,23 @@
                                 
                             </td>
                             <td class = "action">
-                                <i class="material-icons">more_vert</i>
+                                <div class = "dropdown">
+                                    <i class="material-icons dropbtn" onclick = "myFunction()">more_vert</i>
+                                    <div id = "myDropdown" class = "dropdown-content">
+                                        <a href = "#">Send Note</a>
+                                        <a href = "#">Action A</a>
+                                        <a href = "#">Action B</a>
+                                    </div>
+                                </div>
+                                <script src = "index.js"></script>
                             </td>
                         </tr>
                         <tr>
                             <td class = "patient-cell">
-                                <i class="material-icons">person_pin</i> Janet T
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_patient_female.svg"> &nbsp;  Janet T
                             </td>
                             <td class = "professional-cell">
-                                <i class="material-icons">person_pin</i> Dr Harry G
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_doctor_male.svg"> &nbsp;  Dr Harry G
                             </td>
                             <td class="group-cell">
                                 AXA
@@ -151,15 +162,23 @@
                                 Delivered
                             </td>
                             <td class = "action">
-                                <i class="material-icons">more_vert</i>
+                                <div class = "dropdown">
+                                    <i class="material-icons dropbtn" onclick = "myFunction()">more_vert</i>
+                                    <div id = "myDropdown" class = "dropdown-content">
+                                        <a href = "#">Send Note</a>
+                                        <a href = "#">Action A</a>
+                                        <a href = "#">Action B</a>
+                                    </div>
+                                </div>
+                                <script src = "index.js"></script>
                             </td>
                         </tr>
                         <tr>
                             <td class = "patient-cell">
-                                <i class="material-icons">person_pin</i> Ann S
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_patient_female.svg"> &nbsp;  Ann S
                             </td>
                             <td class = "professional-cell">
-                                <i class="material-icons">person_pin</i> Dr Jim W
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_doctor_male.svg"> &nbsp;  Dr Jim W
                             </td>
                             <td class="group-cell">
                                 MyUmbrella
@@ -177,15 +196,23 @@
                                 Sent
                             </td>
                             <td class = "action">
-                                <i class="material-icons">more_vert</i>
+                                <div class = "dropdown">
+                                    <i class="material-icons dropbtn" onclick = "myFunction()">more_vert</i>
+                                    <div id = "myDropdown" class = "dropdown-content">
+                                        <a href = "#">Send Note</a>
+                                        <a href = "#">Action A</a>
+                                        <a href = "#">Action B</a>
+                                    </div>
+                                </div>
+                                <script src = "index.js"></script>
                             </td>
                         </tr>
                         <tr>
                             <td class = "patient-cell">
-                                <i class="material-icons">person_pin</i> Ann S
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_patient_female.svg"> &nbsp;  Ann S
                             </td>
                             <td class = "professional-cell">
-                                <i class="material-icons">person_pin</i> Dr Jim W
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_doctor_male.svg"> &nbsp;  Dr Jim W
                             </td>
                             <td class="group-cell">
                                 MyUmbrella
@@ -203,15 +230,23 @@
                                 Sent
                             </td>
                             <td class = "action">
-                                <i class="material-icons">more_vert</i>
+                                <div class = "dropdown">
+                                    <i class="material-icons dropbtn" onclick = "myFunction()">more_vert</i>
+                                    <div id = "myDropdown" class = "dropdown-content">
+                                        <a href = "#">Send Note</a>
+                                        <a href = "#">Action A</a>
+                                        <a href = "#">Action B</a>
+                                    </div>
+                                </div>
+                                <script src = "index.js"></script>
                             </td>
                         </tr>
                         <tr>
                             <td class = "patient-cell">
-                                <i class="material-icons">person_pin</i> Ann S
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_patient_female.svg"> &nbsp;  Ann S
                             </td>
                             <td class = "professional-cell">
-                                <i class="material-icons">person_pin</i> Dr Jim W
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_doctor_male.svg"> &nbsp;  Dr Jim W
                             </td>
                             <td class="group-cell">
                                 MyUmbrella
@@ -229,15 +264,23 @@
                                 Sent
                             </td>
                             <td class = "action">
-                                <i class="material-icons">more_vert</i>
+                                <div class = "dropdown">
+                                    <i class="material-icons dropbtn" onclick = "myFunction()">more_vert</i>
+                                    <div id = "myDropdown" class = "dropdown-content">
+                                        <a href = "#">Send Note</a>
+                                        <a href = "#">Action A</a>
+                                        <a href = "#">Action B</a>
+                                    </div>
+                                </div>
+                                <script src = "index.js"></script>
                             </td>
                         </tr>
                         <tr>
                             <td class = "patient-cell">
-                                <i class="material-icons">person_pin</i> Ann S
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_patient_female.svg"> &nbsp;  Ann S
                             </td>
                             <td class = "professional-cell">
-                                <i class="material-icons">person_pin</i> Dr Jim W
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_doctor_male.svg"> &nbsp;  Dr Jim W
                             </td>
                             <td class="group-cell">
                                 MyUmbrella
@@ -255,15 +298,23 @@
                                 Sent
                             </td>
                             <td class = "action">
-                                <i class="material-icons">more_vert</i>
+                                <div class = "dropdown">
+                                    <i class="material-icons dropbtn" onclick = "myFunction()">more_vert</i>
+                                    <div id = "myDropdown" class = "dropdown-content">
+                                        <a href = "#">Send Note</a>
+                                        <a href = "#">Action A</a>
+                                        <a href = "#">Action B</a>
+                                    </div>
+                                </div>
+                                <script src = "index.js"></script>
                             </td>
                         </tr>
                         <tr>
                             <td class = "patient-cell">
-                                <i class="material-icons">person_pin</i> Ann S
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_patient_female.svg"> &nbsp;  Ann S
                             </td>
                             <td class = "professional-cell">
-                                <i class="material-icons">person_pin</i> Dr Jim W
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_doctor_male.svg"> &nbsp;  Dr Jim W
                             </td>
                             <td class="group-cell">
                                 MyUmbrella
@@ -281,15 +332,23 @@
                                 Sent
                             </td>
                             <td class = "action">
-                                <i class="material-icons">more_vert</i>
+                                <div class = "dropdown">
+                                    <i class="material-icons dropbtn" onclick = "myFunction()">more_vert</i>
+                                    <div id = "myDropdown" class = "dropdown-content">
+                                        <a href = "#">Send Note</a>
+                                        <a href = "#">Action A</a>
+                                        <a href = "#">Action B</a>
+                                    </div>
+                                </div>
+                                <script src = "index.js"></script>
                             </td>
                         </tr>
                         <tr>
                             <td class = "patient-cell">
-                                <i class="material-icons">person_pin</i> Ann S
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_patient_female.svg"> &nbsp;  Ann S
                             </td>
                             <td class = "professional-cell">
-                                <i class="material-icons">person_pin</i> Dr Jim W
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_doctor_male.svg"> &nbsp;  Dr Jim W
                             </td>
                             <td class="group-cell">
                                 MyUmbrella
@@ -307,15 +366,23 @@
                                 Sent
                             </td>
                             <td class = "action">
-                                <i class="material-icons">more_vert</i>
+                                <div class = "dropdown">
+                                    <i class="material-icons dropbtn" onclick = "myFunction()">more_vert</i>
+                                    <div id = "myDropdown" class = "dropdown-content">
+                                        <a href = "#">Send Note</a>
+                                        <a href = "#">Action A</a>
+                                        <a href = "#">Action B</a>
+                                    </div>
+                                </div>
+                                <script src = "index.js"></script>
                             </td>
                         </tr>
                         <tr>
                             <td class = "patient-cell">
-                                <i class="material-icons">person_pin</i> Ann S
+                                <img class = "gender-icons" src ="../../../Pictures/My-Doc Icons/default_patient_female.svg"> &nbsp;  Ann S
                             </td>
                             <td class = "professional-cell">
-                                <i class="material-icons">person_pin</i> Dr Jim W
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_doctor_male.svg"> &nbsp;  Dr Jim W
                             </td>
                             <td class="group-cell">
                                 MyUmbrella
@@ -333,15 +400,23 @@
                                 Sent
                             </td>
                             <td class = "action">
-                                <i class="material-icons">more_vert</i>
+                                <div class = "dropdown">
+                                    <i class="material-icons dropbtn" onclick = "myFunction()">more_vert</i>
+                                    <div id = "myDropdown" class = "dropdown-content">
+                                        <a href = "#">Send Note</a>
+                                        <a href = "#">Action A</a>
+                                        <a href = "#">Action B</a>
+                                    </div>
+                                </div>
+                                <script src = "index.js"></script>
                             </td>
                         </tr>
                         <tr>
                             <td class = "patient-cell">
-                                <i class="material-icons">person_pin</i> Ann S
+                                <img class = "gender-icons" src ="../../../Pictures/My-Doc Icons/default_patient_female.svg"> &nbsp;  Ann S
                             </td>
                             <td class = "professional-cell">
-                                <i class="material-icons">person_pin</i> Dr Jim W
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_doctor_male.svg"> &nbsp;  Dr Jim W
                             </td>
                             <td class="group-cell">
                                 MyUmbrella
@@ -359,10 +434,119 @@
                                 Sent
                             </td>
                             <td class = "action">
-                                <i class="material-icons">more_vert</i>
+                                <div class = "dropdown">
+                                    <i class="material-icons dropbtn" onclick = "myFunction()">more_vert</i>
+                                    <div id = "myDropdown" class = "dropdown-content">
+                                        <a href = "#">Send Note</a>
+                                        <a href = "#">Action A</a>
+                                        <a href = "#">Action B</a>
+                                    </div>
+                                </div>
+                                <script src = "index.js"></script>
                             </td>
                         </tr>
-                                                
+                        <tr>
+                            <td class = "patient-cell">
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_patient_male.svg"> &nbsp;  Jose M
+                            </td>
+                            <td class = "professional-cell">
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_agent.svg"> &nbsp; Yufin L
+                            </td>
+                            <td class="group-cell">
+                                MyUmbrella
+                            </td>
+                            <td class = "type-cell">
+                               <i class="material-icons">&nbsp;headset_mic</i>
+                            </td>
+                            <td class ="wait-cell">
+                                00:39:12
+                            </td>
+                            <td class = "waiting-for-cell">
+                                Agent reply
+                            </td>
+                            <td class = "last-note-cell">
+                                
+                            </td>
+                            <td class = "action">
+                                <div class = "dropdown">
+                                    <i class="material-icons dropbtn" onclick = "myFunction()">more_vert</i>
+                                    <div id = "myDropdown" class = "dropdown-content">
+                                        <a href = "#">Send Note</a>
+                                        <a href = "#">Action A</a>
+                                        <a href = "#">Action B</a>
+                                    </div>
+                                </div>
+                                <script src = "index.js"></script>
+                            </td>
+                        </tr>    
+                        <tr>
+                            <td class = "patient-cell">
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_patient_male.svg"> &nbsp;  Jose M
+                            </td>
+                            <td class = "professional-cell">
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_agent.svg"> &nbsp; Yufin L
+                            </td>
+                            <td class="group-cell">
+                                MyUmbrella
+                            </td>
+                            <td class = "type-cell">
+                               <i class="material-icons">&nbsp;headset_mic</i>
+                            </td>
+                            <td class ="wait-cell">
+                                00:39:12
+                            </td>
+                            <td class = "waiting-for-cell">
+                                Agent reply
+                            </td>
+                            <td class = "last-note-cell">
+                                
+                            </td>
+                            <td class = "action">
+                                <div class = "dropdown">
+                                    <i class="material-icons dropbtn" onclick = "myFunction()">more_vert</i>
+                                    <div id = "myDropdown" class = "dropdown-content">
+                                        <a href = "#">Send Note</a>
+                                        <a href = "#">Action A</a>
+                                        <a href = "#">Action B</a>
+                                    </div>
+                                </div>
+                                <script src = "index.js"></script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class = "patient-cell">
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_patient_male.svg"> &nbsp;  Jose M
+                            </td>
+                            <td class = "professional-cell">
+                                <img class = "gender-icons" src = "../../../Pictures/My-Doc Icons/default_agent.svg"> &nbsp; Yufin L
+                            </td>
+                            <td class="group-cell">
+                                MyUmbrella
+                            </td>
+                            <td class = "type-cell">
+                               <i class="material-icons">&nbsp;headset_mic</i>
+                            </td>
+                            <td class ="wait-cell">
+                                00:39:12
+                            </td>
+                            <td class = "waiting-for-cell">
+                                Agent reply
+                            </td>
+                            <td class = "last-note-cell">
+                                
+                            </td>
+                            <td class = "action">
+                                <div class = "dropdown">
+                                    <i class="material-icons dropbtn" onclick = "myFunction()">more_vert</i>
+                                    <div id = "myDropdown" class = "dropdown-content">
+                                        <a href = "#">Send Note</a>
+                                        <a href = "#">Action A</a>
+                                        <a href = "#">Action B</a>
+                                    </div>
+                                </div>
+                                <script src = "index.js"></script>
+                            </td>
+                        </tr>   
                     </tbody>
                 </table>
                 
@@ -370,3 +554,4 @@
 
         </main>
     </body>
+</html>
